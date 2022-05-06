@@ -1,0 +1,49 @@
+.info-customer {
+    &__top {
+        padding: 40px;
+        padding-top: 10px;
+    }
+    img {
+        display: block;
+        border-radius: 9999px;
+        width: 100%;
+        max-width: 120px;
+        height: 120px;
+        margin: 0 auto;
+    }
+
+    h4 {
+        text-align: center;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+
+    p {
+        text-align: center;
+        margin: 0 0 10px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        color: #727070;
+    }
+
+    table {
+        tr {
+            th {
+                text-align: center;
+                border: 1px solid #dedede;
+                padding: 10px;
+                font-weight: 100;
+            }
+
+            td {
+                text-align: center;
+                border: 1px solid #dedede;
+                padding: 10px;
+                font-family: 'Quicksand', sans-serif;
+                font-weight: 800;
+                font-size: 20px;
+                color: #333;
+            }
+        }
+    }
+}

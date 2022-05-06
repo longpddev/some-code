@@ -1,0 +1,271 @@
+.filter-rooms {
+    background: #2a2b33;
+    box-shadow: 0px -5px 32px 9px rgba(0, 0, 0, .56);
+    .row {
+        margin-bottom: 0;
+    }
+    &__inner {
+        padding: 35px 40px;
+    }
+
+    &__title {
+        color: #fff;
+        margin: 0px;
+        padding-bottom: 5px;
+        text-transform: uppercase;
+        font-size: 18px;
+        font-family: 'Quicksand', sans-serif;
+        font-weight: 700;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        width: 16.6666666667%;
+        margin-left: auto;
+        left: auto;
+        right: auto;
+    }
+
+    .input-field {
+        background-color: white;
+        margin: 0;
+    }
+    .input-wrap {
+        padding: 0 7.5px;
+        max-width: 16.6666666667%;
+        width: 100%;
+        margin-top: 10px;
+    }
+    .input-field {
+        border-radius: 2px;
+        padding: 0;
+        width: 100%;
+        input{
+            margin-bottom: 0;
+            height: 45px;
+            border-bottom: unset;
+            font-size: 14px;
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 2px;
+            background: #fff;
+            color: #7d7d7d;
+            &:focus {
+                border: unset;
+            }
+
+            &::-webkit-input-placeholder { /* Edge */
+            color: #7d7d7d;
+            }
+            
+            &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: #7d7d7d;
+            }
+            
+            &::placeholder {
+            color: #7d7d7d;
+            }
+        }
+
+        .react-datepicker-wrapper {
+            input {
+                color: #333;
+            }
+        }
+    }
+    .select-wrapper {
+        &:before {
+            content: "▼";
+            margin: auto 0;
+            font-size: 10px;
+            height: 10px;
+            line-height: 10px;
+            color: #cac5c5;
+            position: absolute;
+            right: 8px;
+            top: 0;
+            bottom: 0;
+            z-index: 2;
+        }
+        .caret {
+            z-index: 1;
+            
+
+            path { 
+                display: none;
+            }
+        }
+        .dropdown-content {
+            top: 0!important;
+
+            li {
+                > span {
+                    font-size: 15px;
+                    color: #353d42 !important;
+                    font-weight: 400;
+                    border-right: 0px;
+                    padding: 14px 16px;
+                    display: block;
+                    line-height: 22px;
+                }
+                &:hover,
+                &.active {
+                    background-color: #eee;
+                }
+                &.selected {
+                    background-color: #e1e1e1;
+                }
+            }
+        }
+    }
+    .btn {
+        width: 100%;
+        background: #f4364f;
+        padding: 7px 25px;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-family: 'Quicksand', sans-serif;
+        border-radius: 2px;
+        width: 100%;
+        font-size: 16px;
+        box-sizing: border-box;
+        height: 45px;
+        border: 1px solid #cfcec4;
+        -webkit-appearance: button;
+        line-height: 1.42857143;
+        cursor: pointer;
+    }
+
+    .react-datepicker {
+        padding: 20px;
+        border: 0px solid #c5c5c5;
+        box-shadow: 0px 0px 54px rgba(0, 0, 0 , .31);
+        border-radius: unset;
+        &-popper {
+            & > div {
+                
+            }
+        }
+        &__day-name, 
+        &__day, 
+        &__time-name {
+            width: 40px;
+            margin: 1px;
+            font-family: 'Poppins', sans-serif;
+        }
+        &__day-name {
+            text-transform: uppercase;
+        }
+        &__week {
+            display: flex;
+        }
+        &__time-name {
+        }
+    
+        &__month {
+            margin: 0;
+    
+            &-container {
+               position: relative;
+            }
+        }
+        &__header  {
+            background-color: unset;
+            border-bottom: 1px solid #d0d0d0;
+        }
+        &__day {
+            border: 0px solid #b4b4b4;
+            background: #f6f6f6;
+            font-weight: normal;
+            color: #4f4f4f;
+            padding: 9px;
+            text-align: center;
+            text-decoration: none;
+            margin: 1px;
+            font-size: 14px;
+            transition: all 0.5s ease;
+            border-radius: 0;
+
+    
+            &-name {
+                font-family: 'Poppins', sans-serif;
+                font-size: 14px;
+                color: #727070;
+            }
+            &:hover {
+                border: 0px solid #dad55e;
+                background: #f6598e;
+                color: #ffffff;
+                border-radius: 27px;
+            }
+            &--selected {
+                font-weight: normal;
+                border: 0px solid #dad55e;
+                background: #4CAF50;
+                color: #ffffff;
+                border-radius: 27px;
+
+                &:hover {
+                    background: #4CAF50;
+                }
+            }
+        }
+    
+        &__navigation {
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 12px;
+            
+            top: 20px;
+            &-icon {
+                &::before {
+                    border: unset;
+                }
+            }
+            &--previous {
+                background-image: url('../../../../assets/images/icons/left-arrow.png');
+                left: 22px;
+            }
+    
+            &--next {
+                background-image: url('../../../../assets/images/icons/right-arrow.png');
+                right: 22px;
+            }
+        }
+    
+        &__current-month {
+            line-height: 1.8em;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            color: #727070;
+        }
+        thead {
+            
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .filter-rooms {
+        .row {
+            flex-wrap: wrap;
+        }
+        .input-wrap {
+            max-width: calc(100%/ 3);
+        }
+    }
+}
+
+@media (max-width: 601px) {
+    .filter-rooms {
+        .input-wrap {
+            max-width: 100%;
+        }
+    }
+}

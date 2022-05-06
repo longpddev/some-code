@@ -1,0 +1,198 @@
+.room-item {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #d1d1d1;
+    padding: 10px;
+    margin-bottom: 25px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+    p {
+        margin-bottom: 10px;
+    }
+    
+    p,
+    li {
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        color: #727070;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+
+        li {
+            background: url(../../assets/images/icons/icon-check.png) no-repeat left center;
+            background-size: 10px;
+            padding-left: 20px;
+            line-height: 28px;
+        }
+    }
+
+    .p-10 {
+        padding: 10px;
+    }
+
+    .ribbon {
+        width: 80px;
+        height: 80px;
+        overflow: hidden;
+        position: absolute;
+        margin-top: 10px;
+        margin-left: 10px;
+
+        &:before,
+        &:after {
+            position: absolute;
+            z-index: 0;
+            content: '';
+            display: block;
+            border: 2px solid #587a07;
+        }
+
+
+        span {
+            position: absolute;
+            display: block;
+            width: 130px;
+            padding: 3px 0;
+            background-color: #caa85a;
+            color: #fff;
+            font-size: 11px;
+            font-family: 'Montserrat', sans-serif;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+            text-transform: uppercase;
+            text-align: center;
+            background: #79A70A;
+            background: linear-gradient(#9BC90D 0%, #79A70A 100%);
+
+            right: -19px;
+            top: 21px;
+            transform: rotate(-45deg);
+        }
+    }
+    
+    .ribbon-top-left {
+        top: -4px;
+        left: -4px;
+        &:before {
+            top: 0;
+            right: 0;
+        }
+
+        &:after {
+            left: 0;
+            bottom: 0;
+        }
+        &:before,
+        &:after {
+
+            border-top-color: transparent;
+            border-left-color: transparent;
+        }
+    }
+
+    .room-image,
+    .main-info,
+    .main-feature,
+    .main-price,
+    .main-actions {
+        width: 20%;
+    }
+
+    .room-image {
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    .main-info {
+        &__title {
+            margin-top: 0px;
+            margin-bottom: 10px;
+            font-size: 22px;
+            font-weight: 700;
+            color: #2a2b33;
+            font-family: 'Quicksand', sans-serif;
+        }
+    }
+
+    .room-price {
+
+        &-regular {
+            font-size: 32px;
+            font-weight: 600;
+            font-family: 'Quicksand', sans-serif;
+            color: #333;
+        }
+
+        &-sale {
+            text-decoration: line-through;
+        }
+    }
+
+    .r2-available {
+        background: #4CAF50;
+        display: inline-block;
+        padding: 5px 10px 2px 10px;
+        border-radius: 44px;
+        margin-bottom: 10px;
+        color: #fff;
+        font-size: 12px;
+
+        &.unavailable {
+            background-color: #f80d02;
+        }
+    }
+
+    .link-book {
+        padding: 7px 25px;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-family: 'Quicksand', sans-serif;
+        border-radius: 2px;
+        width: 100%;
+        font-size: 28px;
+        display: table-caption;
+        background: #d0ae64;
+        background: -webkit-linear-gradient(to right, #d6ae7b, #eacda3);
+        background: linear-gradient(to top, #caa65a, #dbbb75);
+        &:hover {
+            background: #cc2b5e;
+            background: -webkit-linear-gradient(to right, #753a88, #cc2b5e);
+            background: linear-gradient(to top, #cc2c5f, #f4364f);
+        }
+    }
+}
+@media screen and (min-width: 993px) {
+    .room-item {
+        .star-rate {
+            flex-wrap: nowrap;
+        }
+    }
+}
+@media screen and (max-width: 992px) {
+    .room-item {
+        flex-wrap: wrap;
+    
+        .room-image,
+        .main-info,
+        .main-feature,
+        .main-price,
+        .main-actions {
+            width: 100%;
+        }
+        .main-info,
+        .main-feature,
+        .main-price {
+            border-bottom: 1px solid #d1d1d1;
+            border-right: 0px solid #d1d1d1;
+        }
+    }
+}

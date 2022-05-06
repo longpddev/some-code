@@ -1,0 +1,31 @@
+.c-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+
+    li {
+        // margin-right: 20px;
+    }
+
+    button {
+        display: inline-block;
+        font-size: 1.2rem;
+        padding: 0 10px;
+        line-height: 30px;
+        font-family: 'Poppins', sans-serif;
+        border-radius: 2px;
+        text-align: center;
+        vertical-align: top;
+        font-size: 12px;
+        height: auto;
+        display: flex;
+        &.active {
+            color: white;
+            background-color: #ee6e73 !important;
+        }
+
+        &.disabled {
+            color: #727070;
+        }
+    }
+}
